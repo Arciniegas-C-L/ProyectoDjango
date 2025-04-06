@@ -15,7 +15,7 @@ def agregar(request):
             return redirect('home')
     else:
         form = TareaForm()
-    context = {'form': form}
+        context = {'form': form}
     return render(request, 'todo/agregar.html', context)
 
 def eliminar(request, tarea_id):
@@ -32,5 +32,5 @@ def editar(request, tarea_id):
             return redirect("home")
     else:
         form = TareaForm(instance=tarea)
-    context = {"form": form}
-    return render(request, "todo/editar.html", context)
+        context = {"form": form}
+    return render(request, 'todo/editar.html', context)
